@@ -1,0 +1,330 @@
+@import url("main.css");
+
+body {
+    height: auto;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    border-left: 2.25px solid orange;
+    padding-left: 10.5px;
+    text-align: left;
+}
+
+.hero {
+    background-color: var(--purple);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 225px;
+    font-family: "TT Backwards Sans Trial";
+}
+
+.heroTextKlein {
+    color: #fff;
+    font-family: "TT Backwards Sans Trial";
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 15px;
+}
+
+.heroTextContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.heroTextGroot1 {
+    color: #fff;
+    font-family: "TT Backwards Sans Trial";
+    font-size: 120px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 15px;
+    margin-right: 10px;
+}
+
+.heroTextGroot2 {
+    color: #f34f3a;
+    font-family: "TT Backwards Sans Trial";
+    font-size: 120px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 15px;
+}
+
+.main-content {
+    display: flex;
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+    gap: 30px;
+}
+
+.left-section {
+    flex: 1;
+}
+
+.right-section {
+    flex: 1;
+}
+
+.vandaagTitel,
+.gisterenTitel,
+.onsProgrammaTitel {
+    color: #000;
+    font-family: var(--anek);
+    font-size: 22.5px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.vandaagText,
+.gisterenText,
+.onsProgrammaText {
+    color: #000;
+    font-family: var(--anek);
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 90%;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.pakketten-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+    max-width: 300px;
+}
+
+.beginner,
+.dynamisch,
+.gevorderd,
+.ultimate {
+    width: 120px;
+    height: 120px;
+    border-radius: 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: space-between;
+}
+
+.beginner {
+    background-color: #a873c0;
+}
+
+.dynamisch {
+    background-color: #5bb4cf;
+}
+
+.gevorderd {
+    background-color: #62d26f;
+}
+
+.ultimate {
+    background-color: #f26d50;
+}
+
+.beginner img,
+.dynamisch img,
+.gevorderd img,
+.ultimate img {
+    position: static;
+    width: 30px;
+    height: 30px;
+    margin-bottom: 10px;
+    filter: brightness(0) invert(1);
+}
+
+.beginnerText,
+.dynamischText,
+.gevorderdText,
+.ultimateText {
+    color: #000;
+    font-family: "TT Backwards Sans Trial", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+    position: static;
+}
+
+.beginnerPrijs,
+.dynamischPrijs,
+.gevorderdPrijs,
+.ultimatePrijs {
+    color: #000;
+    font-family: "Anek Bangla", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    position: static;
+}
+
+.product-button {
+    display: inline-block;
+    background-color: var(--purple);
+    color: white;
+    font-family: "TT Backwards Sans Trial", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    padding: 4px 8px;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 7.5px;
+    right: 7.5px;
+    transition: background-color 0.2s ease;
+}
+
+.product-button:hover {
+    background-color: var(--red);
+}
+
+
+.beginner .product-button {
+    background-color: #8550c0;
+}
+
+.dynamisch .product-button {
+    background-color: #4da0c0;
+}
+
+.gevorderd .product-button {
+    background-color: #4cb546;
+}
+
+.ultimate .product-button {
+    background-color: #d74f3c;
+}
+
+
+
+
+
+#nieuwsberichten {
+    width: 100%;
+    max-width: 500px;
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#nieuwsberichten h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #333;
+    font-family: var(--anek);
+}
+
+#nieuwsberichten article {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+#nieuwsberichten article:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+#nieuwsberichten article h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+    font-family: var(--anek);
+}
+
+#nieuwsberichten article p {
+    font-size: 1rem;
+    line-height: 1.4;
+    color: #666;
+    font-family: var(--tt);
+}
+
+#nieuwsberichten article small {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.8rem;
+    color: #777;
+    font-family: var(--lilita);
+}
+
+/* Responsive design for hero section */
+@media (max-width: 768px) {
+    .hero {
+        height: 180px;
+        padding: 20px;
+    }
+    
+    .heroTextKlein {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    
+    .heroTextContainer {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .heroTextGroot1,
+    .heroTextGroot2 {
+        font-size: 60px;
+        letter-spacing: 8px;
+        text-align: center;
+    }
+    
+    .main-content {
+        flex-direction: column;
+        width: 95%;
+        gap: 20px;
+    }
+    
+    .pakketten-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .heroTextGroot1,
+    .heroTextGroot2 {
+        font-size: 40px;
+        letter-spacing: 5px;
+    }
+    
+    .heroTextKlein {
+        font-size: 16px;
+    }
+    
+    .pakketten-container {
+        grid-template-columns: 1fr;
+    }
+}

@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KrasHosting</title>
-    <link rel="stylesheet" href="{{ asset('css/home.css') }}">
+    <title>Login - KrasHosting Admin</title>
+    <link rel="stylesheet" href="{{ asset('css/login.css') }}">
 </head>
 
 <body>
@@ -36,63 +36,46 @@
             </div>
         </div>
     </header>
+    <div class="content" id="loginContent">
+        <h1>Inloggen</h1>
 
-    <div class="hero">
-        <div class="heroTextKlein">Hosting services</div>
-        <div class="heroTextContainer">
-            <div class="heroTextGroot1">KRAS</div>
-            <div class="heroTextGroot2">HOSTING </div>
-        </div>
-    </div>
-
-    <div class="main-content">
-        <div class="left-section">
-            <h1 class="onsProgrammaTitel">Ons Programma</h1>
-            <p class="onsProgrammaText">Onze beste fitness expers helpen je met nieuwe technieken</p>
-
-            <div class="pakketten-container">
-                <div class="beginner">
-                    <img src="{{ asset('img/Bloem.svg') }}" alt="Package icon">
-                    <p class="beginnerText">Beginner</p>
-                    <p class="beginnerPrijs">€5</p>
-                    <a href="{{ route('producten.show') }}" class="product-button">Meer info</a>
-                </div>
-                <div class="dynamisch">
-                    <img src="{{ asset('img/Bloem.svg') }}" alt="Package icon">
-                    <p class="dynamischText">Dynamisch</p>
-                    <p class="dynamischPrijs">€8</p>
-                    <a href="{{ route('producten.show') }}" class="product-button">Meer info</a>
-                </div>
-                <div class="gevorderd">
-                    <img src="{{ asset('img/Bloem.svg') }}" alt="Package icon">
-                    <p class="gevorderdText">Gevorderd</p>
-                    <p class="gevorderdPrijs">€12</p>
-                    <a href="{{ route('producten.show') }}" class="product-button">Meer info</a>
-                </div>
-                <div class="ultimate">
-                    <img src="{{ asset('img/Bloem.svg') }}" alt="Package icon">
-                    <p class="ultimateText">Ultimate</p>
-                    <p class="ultimatePrijs">€20</p>
-                    <a href="{{ route('producten.show') }}" class="product-button">Meer info</a>
-                </div>
-            </div>
-        </div>
-
-        <section id="nieuwsberichten">
-            <h2>Laatste Nieuws</h2>
-            @if($news->count() > 0)
-                @foreach($news as $newsItem)
-                    <article>
-                        <h3>{{ $newsItem->title }}</h3>
-                        <p>{{ $newsItem->content }}</p>
-                        <small>{{ $newsItem->created_at->format('d-m-Y') }}</small>
-                    </article>
+        @if ($errors->any())
+            <div id="errorMessage" class="message error">
+                @foreach ($errors->all() as $error)
+                    {{ $error }}
                 @endforeach
-            @else
-                <p>Geen nieuws beschikbaar.</p>
-            @endif
-        </section>
+            </div>
+        @endif
+
+        @if (session('success'))
+            <div class="message success">
+                {{ session('success') }}
+            </div>
+        @endif
+
+        <form action="{{ route('login.authenticate') }}" method="POST">
+            @csrf
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" value="{{ old('email') }}" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Wachtwoord:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+
+            <button type="submit" class="login-button">Log in</button>
+        </form>
+
+        <div id="credentialsInfo" class="message"
+            style="background-color: #e2e3e5; color: #383d41; border: 1px solid #d6d8db;">
+            <strong>Gebruik voor demonstratie:</strong><br>
+            Email: admin@admin.nl<br>
+            Wachtwoord: welkom123
+        </div>
     </div>
+    <img class="img" src="{{ asset('img/paars.png') }}" alt="decoration">
 
     <footer>
         <div>

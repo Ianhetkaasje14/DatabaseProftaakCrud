@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KrasHosting</title>
-    <link rel="stylesheet" href="{{ asset('css/home.css') }}">
+    <title>Contact - KrasHosting</title>
+    <link rel="stylesheet" href="{{ asset('css/contact.css') }}">
 </head>
 
 <body>
@@ -19,7 +19,7 @@
             <a class="link" href="{{ route('producten.show') }}">Producten</a>
             <a class="link" href="{{ route('contact.show') }}">Contact</a>
             <div id="icon-wrapper">
-                <a class="icon" id="account" href="{{ route('login.show') }}">
+                <a class="icon" id="account" href="#">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M12 12C10.35 12 8.9375 11.4125 7.7625 10.2375C6.5875 9.0625 6 7.65 6 6C6 4.35 6.5875 2.9375 7.7625 1.7625C8.9375 0.5875 10.35 0 12 0C13.65 0 15.0625 0.5875 16.2375 1.7625C17.4125 2.9375 18 4.35 18 6C18 7.65 17.4125 9.0625 16.2375 10.2375C15.0625 11.4125 13.65 12 12 12ZM0 24V19.8C0 18.95 0.21875 18.1688 0.65625 17.4563C1.09375 16.7438 1.675 16.2 2.4 15.825C3.95 15.05 5.525 14.4688 7.125 14.0813C8.725 13.6938 10.35 13.5 12 13.5C13.65 13.5 15.275 13.6938 16.875 14.0813C18.475 14.4688 20.05 15.05 21.6 15.825C22.325 16.2 22.9062 16.7438 23.3438 17.4563C23.7813 18.1688 24 18.95 24 19.8V24H0ZM3 21H21V19.8C21 19.525 20.9313 19.275 20.7938 19.05C20.6562 18.825 20.475 18.65 20.25 18.525C18.9 17.85 17.5375 17.3438 16.1625 17.0063C14.7875 16.6688 13.4 16.5 12 16.5C10.6 16.5 9.2125 16.6688 7.8375 17.0063C6.4625 17.3438 5.1 17.85 3.75 18.525C3.525 18.65 3.34375 18.825 3.20625 19.05C3.06875 19.275 3 19.525 3 19.8V21ZM12 9C12.825 9 13.5313 8.70625 14.1188 8.11875C14.7063 7.53125 15 6.825 15 6C15 5.175 14.7063 4.46875 14.1188 3.88125C13.5313 3.29375 12.825 3 12 3C11.175 3 10.4688 3.29375 9.88125 3.88125C9.29375 4.46875 9 5.175 9 6C9 6.825 9.29375 7.53125 9.88125 8.11875C10.4688 8.70625 11.175 9 12 9Z"
@@ -36,63 +36,47 @@
             </div>
         </div>
     </header>
+    <h1 class="contactTitel">Contact</h1>
+    <p class="contactText">Neem contact met ons op</p>
 
-    <div class="hero">
-        <div class="heroTextKlein">Hosting services</div>
-        <div class="heroTextContainer">
-            <div class="heroTextGroot1">KRAS</div>
-            <div class="heroTextGroot2">HOSTING </div>
-        </div>
-    </div>
+    <form class="form" action="">
+        <label class="formNaam" for="name">Naam</label>
+        <input class="formNaamInput" type="text" id="name" name="name">
 
-    <div class="main-content">
-        <div class="left-section">
-            <h1 class="onsProgrammaTitel">Ons Programma</h1>
-            <p class="onsProgrammaText">Onze beste fitness expers helpen je met nieuwe technieken</p>
+        <label class="formEmail" for=" email">Email</label>
+        <input class="formEmailInput" type="email" id="email" name="email">
 
-            <div class="pakketten-container">
-                <div class="beginner">
-                    <img src="{{ asset('img/Bloem.svg') }}" alt="Package icon">
-                    <p class="beginnerText">Beginner</p>
-                    <p class="beginnerPrijs">€5</p>
-                    <a href="{{ route('producten.show') }}" class="product-button">Meer info</a>
-                </div>
-                <div class="dynamisch">
-                    <img src="{{ asset('img/Bloem.svg') }}" alt="Package icon">
-                    <p class="dynamischText">Dynamisch</p>
-                    <p class="dynamischPrijs">€8</p>
-                    <a href="{{ route('producten.show') }}" class="product-button">Meer info</a>
-                </div>
-                <div class="gevorderd">
-                    <img src="{{ asset('img/Bloem.svg') }}" alt="Package icon">
-                    <p class="gevorderdText">Gevorderd</p>
-                    <p class="gevorderdPrijs">€12</p>
-                    <a href="{{ route('producten.show') }}" class="product-button">Meer info</a>
-                </div>
-                <div class="ultimate">
-                    <img src="{{ asset('img/Bloem.svg') }}" alt="Package icon">
-                    <p class="ultimateText">Ultimate</p>
-                    <p class="ultimatePrijs">€20</p>
-                    <a href="{{ route('producten.show') }}" class="product-button">Meer info</a>
-                </div>
+        <label class="formVraag" for="subject">Vraag</label>
+        <textarea class="formVraagInput" id="subject" name="subject"></textarea>
+
+        <input class="submit" type="submit" value="Verzenden">
+    </form>
+
+    <h1 class="faqTitel">Faq</h1>
+    <p class="faqText">Veel gestelde vragen</p>
+
+    <div class="faqVragen">
+        <div class="faqItem1">
+            <div class="faqQuestion1">
+                <span>Ik heb het verkeerde product besteld!</span>
+                <span class="arrow">&#9660;</span>
+            </div>
+            <div class="faqAnswer1" style="display: none;">
+                <p>Stuur ons zo snel mogelijk een bericht, wij lossen het op!</p>
             </div>
         </div>
-
-        <section id="nieuwsberichten">
-            <h2>Laatste Nieuws</h2>
-            @if($news->count() > 0)
-                @foreach($news as $newsItem)
-                    <article>
-                        <h3>{{ $newsItem->title }}</h3>
-                        <p>{{ $newsItem->content }}</p>
-                        <small>{{ $newsItem->created_at->format('d-m-Y') }}</small>
-                    </article>
-                @endforeach
-            @else
-                <p>Geen nieuws beschikbaar.</p>
-            @endif
-        </section>
+        <div class="faqItem2">
+            <div class="faqQuestion2">
+                <span>Hoe kan ik contact opnemen?</span>
+                <span class="arrow">&#9660;</span>
+            </div>
+            <div class="faqAnswer2" style="display: none;">
+                <p>U kunt ons altijd bellen via ons telefoonnummer: 06827383939 <br>
+                    Of via het contact formulier</p>
+            </div>
+        </div>
     </div>
+
 
     <footer>
         <div>
@@ -110,6 +94,17 @@
             <p>Adres: Kasteeldreef 122, 5046 CV Tilburg</p>
         </div>
     </footer>
+    <script>
+        document.querySelectorAll('.faqQuestion1, .faqQuestion2').forEach(item => {
+            item.addEventListener('click', () => {
+                const answer = item.nextElementSibling;
+                const arrow = item.querySelector('.arrow');
+                answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+                arrow.style.transform = arrow.style.transform === 'rotate(180deg)' ? 'rotate(0deg)' : 'rotate(180deg)';
+            });
+        });
+    </script>
+
 </body>
 
 </html>

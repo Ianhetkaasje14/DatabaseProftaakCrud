@@ -1,0 +1,97 @@
+@import url("main.css");
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    border-left: 2px solid orange;
+    padding-left: 14px;
+    top: 50px;
+    width: 500px;
+}
+body {
+    font-family:Arial, sans-serif;
+}
+@import url("https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@100..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lilita+One&display=swap");
+
+@font-face {
+    font-family: Nimbus;
+    src: url("../fonts/NimbusSansT-BlackCondensed.otf");
+}
+.container {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+    position: relative;
+}
+.content {
+    width: 90%;
+    padding: 40px;
+    flex-grow: 1;
+    position: relative;
+    left: 100px;
+}
+
+h1 {
+    font-size: 48px;
+    margin-bottom: 60px;
+    font-weight: bold;
+    margin-top: 50px;
+}
+
+.form-group {
+    margin-bottom: 30px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+input {
+    width: 100%;
+    max-width: 520px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.login-button {
+    background-color: #f05545;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 12px 30px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.message {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 520px;
+}
+
+.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.hidden {
+    display: none;
+}
+.img {
+    position: absolute;
+    right: 100px;
+    top: 45%;
+    transform: translateY(-50%);
+    max-width: 500px;
+}
