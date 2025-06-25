@@ -1,5 +1,5 @@
 <?php
-
+//  dit bestand is eervoor om dummy data in de dattabase te zetten
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;

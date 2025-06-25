@@ -1,5 +1,5 @@
 <?php
-
+// bestand heeft een functie om de dashboard te laten zien als je ingelogd bent en een functie om te authenticeren met de database en een functie om uit te loggen
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -15,7 +15,7 @@ class LoginController extends Controller
         return view('login');
     }
 
-    public function authenticate(Request $request)
+    public function authenticate(Request $request) //de manier van laravel om te authenticeren met een request en de validate functie die ervoor zorgen dat de email en password aanwezig zijn
     {
         $credentials = $request->validate([
             'email' => ['required', 'email'],
@@ -26,7 +26,7 @@ class LoginController extends Controller
             $request->session()->regenerate();
 
             if (Auth::user()->isAdmin()) {
-                return redirect()->route('dashboard.show')->with('success', 'Welcome to the admin dashboard!');
+                return redirect()->route('dashboard.show')->with('success', 'Het werkt je bent eindelijk ingelogd!');
             } else {
                 Auth::logout();
                 return back()->withErrors([
@@ -45,6 +45,6 @@ class LoginController extends Controller
         Auth::logout();
         $request->session()->invalidate();
         $request->session()->regenerateToken();
-        return redirect()->route('login.show')->with('success', 'You have been logged out successfully.');
+        return redirect()->route('login.show')->with('success', 'Ja het uitloggen werkt ook.');
     }
 }

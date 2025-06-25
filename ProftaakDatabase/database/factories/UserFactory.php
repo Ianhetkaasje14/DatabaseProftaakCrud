@@ -1,5 +1,6 @@
 <?php
-
+//factory default bestand wordt niet veel gebruikt, maar is handig voor het maken van testdata
+// dit bestand maakt een user aan met een password en een random token
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;

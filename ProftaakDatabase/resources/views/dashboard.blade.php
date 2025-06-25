@@ -81,7 +81,7 @@
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit"
-                                    onclick="return confirm('Weet je zeker dat je dit nieuwsbericht wilt verwijderen?')"
+                                    onclick="return confirm('Ja, weet je het zeker')"
                                     class="delete-btn">Verwijderen</button>
                             </form>
                         </div>

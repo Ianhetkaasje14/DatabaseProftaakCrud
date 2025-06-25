@@ -1,4 +1,5 @@
 <?php
+//bestand dat de verbinding maakt met de database voor de user het haalt de data uit de database en maakt het mogelijk om deze te gebruiken in de applicatie
 
 namespace App\Models;
 
@@ -19,7 +20,7 @@ class User extends Authenticatable
 
     protected $hidden = [
         'password',
-        'remember_token',
+        'remember_token', // hidden zodat je deze niet in json hebt
     ];
 
     protected function casts(): array

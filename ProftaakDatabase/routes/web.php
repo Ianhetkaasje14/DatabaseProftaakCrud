@@ -9,7 +9,7 @@ use App\Http\Controllers\ProductenController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\DashboardController;
-
+// gebruik alle controllers
 Route::get('/anderepagina', [AnderePaginaController::class, 'show'])->name('anderepagina.show');
 
 Route::get('/home', [HomeController::class, 'show'])->name('home.show');
@@ -29,3 +29,5 @@ Route::get('/dashboard', [DashboardController::class, 'show'])->name('dashboard.
 Route::post('/dashboard/news', [DashboardController::class, 'storeNews'])->name('dashboard.news.store');
 Route::put('/dashboard/news/{id}', [DashboardController::class, 'updateNews'])->name('dashboard.news.update');
 Route::delete('/dashboard/news/{id}', [DashboardController::class, 'deleteNews'])->name('dashboard.news.delete');
+// verder staan hier alle routes in die aangeven waar de gebruiker naartoe moet gaan
+// en welke controller en methode daarvoor gebruikt moet worden

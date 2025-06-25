@@ -9,7 +9,7 @@ class HomeController extends Controller
 {
     public function show()
     {
-        $news = News::orderBy('created_at', 'desc')->take(5)->get();
+        $news = News::orderBy('created_at', 'desc')->take(5)->get(); //haalt de laatste 5 nieuwsitems op
         return view('home', compact('news'));
     }
 }
