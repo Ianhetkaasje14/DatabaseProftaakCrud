@@ -2,8 +2,10 @@
 
 -----------------------------------------------------------------------------------------------------------
 
-Voor dit project hadden wij geen tijd meer, dus geniet van deze mooie github met onze reflectie en twee standaard laravel paginas die aan elkaar gelinked zijn!!!
+Dit project is een curd aplicatie voor database, het ontwerp komt van het project krashosting.
 
-In het project zit ook een mapje genaamd deDatabase, hier kun je het database bestand vinden
+Het stukje crud zit hem in het plaatsen van nieuwsberichten vanuit de dashboard op de homepagina
+
+Je kunt de database migraten en er staan seeders in die je kunt runnen voor dummy data
 
 -----------------------------------------------------------------------------------------------------------
