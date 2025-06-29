@@ -7,6 +7,7 @@ use App\Models\News;
 
 class NewsSeeder extends Seeder
 {
+    // De seeder runt met php artisan db:seed --class=NewsSeeder of php artisan db:seed voor alle seeders
     public function run(): void
     {
         News::create([

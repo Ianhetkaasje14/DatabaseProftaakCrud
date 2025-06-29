@@ -4,12 +4,12 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
+return new class extends Migration // database maken met nieuwsartikelen je runt de migration met php artisan migrate
 {
     public function up(): void
     {
         Schema::dropIfExists('news');
-        
+
         Schema::create('news', function (Blueprint $table) {
             $table->id();
             $table->string('title');

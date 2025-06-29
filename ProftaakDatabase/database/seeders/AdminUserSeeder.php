@@ -7,7 +7,7 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
 use App\Models\User;
 
-class AdminUserSeeder extends Seeder
+class AdminUserSeeder extends Seeder //je gebruikt de seeder door php artisan db:seed --class=AdminUserSeeder 
 {
     public function run(): void
     {
