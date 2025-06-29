@@ -9,12 +9,12 @@ class News extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
+    protected $fillable = [ //velden die ingevuld mogen worden
         'title',
         'content'
     ];
 
-    protected $casts = [
+    protected $casts = [ //types van de velden zodat de database het begrijpt
         'created_at' => 'datetime',
         'updated_at' => 'datetime'
     ];

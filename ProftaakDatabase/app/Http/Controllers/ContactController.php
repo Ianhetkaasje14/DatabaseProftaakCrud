@@ -8,6 +8,6 @@ class ContactController extends Controller
 {
     public function show()
     {
-        return view('contact');
+        return view('contact'); //alleen voor het koekeloeren 
     }
 }

@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
+    // functie die de login pagina laat zien of doorverwijst naar dashboard als je al ingelogd bent als admin
     public function show()
     {
         if (Auth::check() && Auth::user()->isAdmin()) {
@@ -15,6 +16,7 @@ class LoginController extends Controller
         return view('login');
     }
 
+    // functie die de inloggegevens controleert en alleen admins toegang geeft tot het dashboard
     public function authenticate(Request $request) //de manier van laravel om te authenticeren met een request en de validate functie die ervoor zorgen dat de email en password aanwezig zijn
     {
         $credentials = $request->validate([
@@ -30,21 +32,22 @@ class LoginController extends Controller
             } else {
                 Auth::logout();
                 return back()->withErrors([
-                    'email' => 'Access denied. Admin privileges required.',
+                    'email' => 'Access denied. werkt niet.',
                 ]);
             }
         }
 
         return back()->withErrors([
-            'email' => 'The provided credentials do not match our records.',
+            'email' => 'login werkt niet.',
         ]);
     }
 
+    // functie die de user uitlogt en alle sessiegegevens opruimt voor veiligheid
     public function logout(Request $request)
     {
         Auth::logout();
         $request->session()->invalidate();
         $request->session()->regenerateToken();
-        return redirect()->route('login.show')->with('success', 'Ja het uitloggen werkt ook.');
+        return redirect()->route('login.show')->with('success', 'Ja het uitloggen werkt ook en is veilig.');
     }
 }
